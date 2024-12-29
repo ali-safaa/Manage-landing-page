@@ -1,0 +1,153 @@
+* {
+     margin: 0;
+     padding: 0;
+     font-family: "Be Vietnam Pro", serif;
+}
+
+header {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-around;
+     padding-top: 40px;
+}
+
+ul {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     list-style: none;
+}
+
+ul li {
+     margin-right: 40px;
+     cursor: pointer;
+     transition: 0.3s ease-in;
+     color: hsl(228, 39%, 23%);
+     font-weight: 500;
+     text-transform: capitalize;
+}
+
+ul li:hover {
+     color: hsl(227, 12%, 61%);
+}
+
+header > button {
+     background-color: hsl(12, 88%, 59%);
+     padding: 10px 25px;
+     border-radius: 20px;
+     border: none;
+     color: white;
+     cursor: pointer;
+}
+
+header > button:hover {
+     background-color: hsl(12, 74%, 76%);
+}
+
+.hamburger-icon {
+     display: none;
+}
+
+.close-icon {
+     display: none;
+}
+
+.nav-mobile {
+     display: none;
+}
+
+.hero-info {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     margin: 0 160px;
+     margin-top: 80px;
+     /* display: none; */
+}
+
+.hero-info__title {
+     display: grid;
+     /* flex-direction: column; */
+     align-items: center;
+     /* display: none; */
+}
+
+.hero-info__title > h1 {
+     font-size: clamp(30px, 5vw, 60px);
+     max-width: 600px;
+     color: hsl(228, 39%, 23%);
+     margin-bottom: 40px;
+     font-weight: 700;
+}
+
+.hero-info__title > p {
+     max-width: 500px;
+     color: hsl(227, 12%, 61%);
+     margin-bottom: 40px;
+}
+
+.hero-info__title > button {
+     background-color: hsl(12, 88%, 59%);
+     padding: 10px 25px;
+     border-radius: 20px;
+     border: none;
+     color: white;
+     cursor: pointer;
+     width: fit-content;
+}
+
+.hero-info__title > button:hover {
+     background-color: hsl(12, 74%, 76%);
+}
+
+@media (min-width: 320px) and (max-width: 839px) {
+     header {
+          justify-content: space-between;
+          padding: 0 20px;
+          padding-top: 40px;
+     }
+
+     .nav-desktop {
+          display: none;
+     }
+
+     header > button {
+          display: none;
+     }
+
+     .nav-mobile {
+          display: none;
+          position: fixed;
+          top: 25%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          border-radius: 10px;
+          width: clamp(300px, 80vw, 500px);
+     }
+
+     .nav-mobile > ul {
+          display: grid;
+          align-items: center;
+          justify-content: center;
+          margin: 30px 0;
+     }
+
+     .nav-mobile > ul li {
+          margin: auto;
+          margin-bottom: 20px;
+          transition: 0.3s ease-in;
+          cursor: pointer;
+          font-weight: 500;
+     }
+
+     .nav-mobile > ul li:hover {
+          color: hsl(227, 12%, 61%);
+     }
+
+     .hamburger-icon {
+          display: block;
+     }
+}

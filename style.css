@@ -59,23 +59,20 @@ header > button:hover {
 
 .hero-info {
      display: flex;
-     flex-direction: row;
      align-items: center;
      justify-content: space-between;
      margin: 0 160px;
      margin-top: 80px;
-     /* display: none; */
+     flex-wrap: wrap;
 }
 
 .hero-info__title {
      display: grid;
-     /* flex-direction: column; */
      align-items: center;
-     /* display: none; */
 }
 
 .hero-info__title > h1 {
-     font-size: clamp(30px, 5vw, 60px);
+     font-size: clamp(20px, 5vw, 60px);
      max-width: 600px;
      color: hsl(228, 39%, 23%);
      margin-bottom: 40px;
@@ -86,6 +83,7 @@ header > button:hover {
      max-width: 500px;
      color: hsl(227, 12%, 61%);
      margin-bottom: 40px;
+     line-height: 1.5;
 }
 
 .hero-info__title > button {
@@ -100,6 +98,156 @@ header > button:hover {
 
 .hero-info__title > button:hover {
      background-color: hsl(12, 74%, 76%);
+}
+
+.feed__sec-1 {
+     display: flex;
+     flex-direction: row;
+     align-items: start;
+     justify-content: space-around;
+     margin-top: 80px;
+     flex-wrap: wrap;
+     margin-bottom: 40px;
+}
+
+.sec-1__title {
+     display: grid;
+     align-items: center;
+     margin-bottom: 40px;
+}
+
+.sec-1__title > h2 {
+     font-weight: 700;
+     margin-bottom: 20px;
+     font-size: clamp(30px, 5vw, 50px);
+     color: hsl(228, 39%, 23%);
+     max-width: 600px;
+}
+
+.sec-1__title > p {
+     max-width: 500px;
+     line-height: 1.5;
+     font-weight: 700;
+     color: hsl(227, 12%, 61%);
+}
+
+.sec-1__lists {
+     display: grid;
+     align-items: center;
+}
+
+.list {
+     display: grid;
+     align-items: center;
+     margin-bottom: 80px;
+}
+.title {
+     display: flex;
+     align-items: center;
+     margin-bottom: 20px;
+}
+
+.title > h2 {
+     color: hsl(228, 39%, 23%);
+     font-size: clamp(10px, 5vw, 20px);
+}
+
+.title > span {
+     background-color: hsl(12, 88%, 59%);
+     padding: 5px 20px;
+     border-radius: 20px;
+     color: white;
+     margin-right: 20px;
+}
+
+.list > p {
+     line-height: 1.5;
+     color: hsl(227, 12%, 61%);
+     font-weight: 500;
+     max-width: 500px;
+}
+
+.feed__sec-2 {
+     display: grid;
+     align-items: center;
+     justify-content: center;
+}
+
+.sec-2__title > h2 {
+     color: hsl(228, 39%, 23%);
+     font-size: clamp(20px, 5vw, 30px);
+     margin-bottom: 160px;
+     text-align: center;
+}
+
+.card__reviews {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: center;
+}
+
+.card {
+     display: grid;
+     align-items: center;
+     background-color: hsl(13, 100%, 96%);
+     padding: 0 40px;
+     border-radius: 10px;
+     margin-right: 20px;
+     margin-bottom: 80px;
+}
+
+.card > img {
+     width: clamp(100px, 7vw, 500px);
+     position: relative;
+     top: -50px;
+     margin: 0 auto;
+}
+
+.card > h3 {
+     color: hsl(228, 39%, 23%);
+     font-size: clamp(10px, 5vw, 20px);
+     text-align: center;
+}
+
+.card > p {
+     color: hsl(227, 12%, 61%);
+     max-width: 500px;
+     text-align: center;
+     margin: 40px auto;
+}
+
+.feed__sec-2 > button {
+     background-color: hsl(12, 88%, 59%);
+     padding: 10px 25px;
+     border-radius: 20px;
+     border: none;
+     color: white;
+     cursor: pointer;
+     margin: 0 auto;
+     width: fit-content;
+}
+
+.feed__sec-2 > button:hover {
+     background-color: hsl(12, 74%, 76%);
+}
+
+@media (min-width: 1000px) and (max-width: 1500px) {
+     .hero-info {
+          justify-content: center;
+     }
+
+     .hero-info__title > h1 {
+          text-align: center;
+     }
+
+     .hero-info__title > p {
+          margin: 0 auto;
+     }
+
+     .hero-info__title > button {
+          margin: 40px auto;
+     }
 }
 
 @media (min-width: 320px) and (max-width: 839px) {
@@ -149,5 +297,49 @@ header > button:hover {
 
      .hamburger-icon {
           display: block;
+     }
+
+     .hero-info {
+          flex-direction: column-reverse;
+          margin: 0;
+     }
+
+     .hero-info__title > h1 {
+          text-align: center;
+     }
+
+     .hero-info__title > button {
+          margin: 0 auto;
+          margin-bottom: 40px;
+     }
+
+     .feed__sec-1 {
+          display: grid;
+          justify-content: center;
+     }
+
+     .sec-1__title > h2 {
+          text-align: center;
+     }
+
+     .sec-1__title > p {
+          margin: 0 auto;
+          text-align: center;
+          margin-bottom: 80px;
+     }
+
+     .title {
+          background-color: hsl(13, 100%, 96%);
+          padding: 10px 15px;
+          border-radius: 20px;
+     }
+
+     .list > p {
+          margin-bottom: 20px;
+     }
+
+     .card {
+          margin: 0 20px;
+          margin-bottom: 80px;
      }
 }

@@ -232,6 +232,40 @@ header > button:hover {
      background-color: hsl(12, 74%, 76%);
 }
 
+.feed__sec-3 {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 80px 160px;
+     background-color: hsl(12, 88%, 59%);
+     margin-top: 40px;
+}
+
+.feed__sec-3 > h2 {
+     font-size: clamp(15px, 5vw, 40px);
+     font-weight: 700;
+     color: white;
+     text-transform: capitalize;
+}
+
+.feed__sec-3 > button {
+     font-weight: 500;
+     color: hsl(12, 88%, 59%);
+     text-transform: capitalize;
+     background-color: white;
+     padding: 10px 25px;
+     border-radius: 20px;
+     border: none;
+     cursor: pointer;
+     width: fit-content;
+     transition: 0.3s ease-in;
+}
+
+.feed__sec-3 > button:hover {
+     background-color: hsl(9, 3%, 41%);
+     color: white;
+}
+
 @media (min-width: 1000px) and (max-width: 1500px) {
      .hero-info {
           justify-content: center;

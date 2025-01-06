@@ -1,6 +1,11 @@
 const nav_mobile = document.querySelector("[data-nav-mobile]");
 const hamburger_icon = document.querySelector("[data-hamburger-icon]");
 const close_icon = document.querySelector("[data-close-icon]");
+const dots = document.querySelectorAll("[data-dot]");
+const card_review = document.querySelectorAll("[data-card]");
+const progress_dot = document.querySelectorAll("[data-progress-dot]");
+
+let currentIndex = 0;
 
 hamburger_icon.addEventListener("click", () => {
      hamburger_icon.style.display = "none";
@@ -39,3 +44,37 @@ close_icon.addEventListener("click", () => {
 //           close_icon.style.color = "white";
 //      }
 // });
+
+function updateCarousel() {
+     card_review.forEach((card, index) => {
+          card.classList.remove("active");
+          dots[index].classList.remove("active");
+          progress_dot[index].classList.remove("active");
+     });
+
+     card_review[currentIndex].classList.add("active");
+     dots[currentIndex].classList.add("active");
+     progress_dot[currentIndex].classList.add("active");
+}
+
+function nextSlide() {
+     for (let progress = 10; progress <= 100; progress += 10) {
+          progress_dot.forEach((progress_dot) => {
+               progress_dot.style.setProperty("--progress", `${progress}%`);
+          });
+     }
+
+     currentIndex = (currentIndex + 1) % card_review.length;
+     updateCarousel();
+}
+
+// Automatically change slides
+setInterval(nextSlide, 8000);
+
+// Optional: Add click functionality for dots
+dots.forEach((dot, index) => {
+     dot.addEventListener("click", () => {
+          currentIndex = index;
+          updateCarousel();
+     });
+});

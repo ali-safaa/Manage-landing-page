@@ -176,11 +176,11 @@ header > button:hover {
 .sec-2__title > h2 {
      color: hsl(228, 39%, 23%);
      font-size: clamp(20px, 5vw, 30px);
-     margin-bottom: 160px;
+     margin-bottom: 80px;
      text-align: center;
 }
 
-.card__reviews {
+.cards__reviews {
      display: flex;
      align-items: center;
      flex-wrap: wrap;
@@ -266,7 +266,7 @@ header > button:hover {
      color: white;
 }
 
-@media (min-width: 1000px) and (max-width: 1500px) {
+@media (min-width: 889px) and (max-width: 1500px) {
      .hero-info {
           justify-content: center;
      }
@@ -282,9 +282,70 @@ header > button:hover {
      .hero-info__title > button {
           margin: 40px auto;
      }
+
+     .card {
+          display: none;
+     }
+     .card.active {
+          display: block;
+     }
+
+     .dots {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 40px 0;
+     }
+
+     .dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 3px solid antiquewhite;
+          margin-right: 20px;
+     }
+
+     .dot.active {
+          animation-name: rectangular-dot;
+          animation-direction: normal;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-duration: 2s;
+          border-radius: 10px;
+          transition: 0.5s ease;
+     }
+
+     @keyframes rectangular-dot {
+          from {
+               width: 20px;
+          }
+          to {
+               width: 50px;
+          }
+     }
+
+     .dot-progress.active {
+          width: 20px;
+          height: 20px;
+          animation-name: progress-dot;
+          animation-duration: 10s;
+          background-color: rgb(83, 120, 120);
+          animation-iteration-count: 1;
+          border-radius: 10px;
+          animation-fill-mode: forwards;
+     }
+
+     @keyframes progress-dot {
+          from {
+               width: 20px;
+          }
+          to {
+               width: var(--progress);
+          }
+     }
 }
 
-@media (min-width: 320px) and (max-width: 839px) {
+@media (min-width: 320px) and (max-width: 888px) {
      header {
           justify-content: space-between;
           padding: 0 20px;
@@ -374,6 +435,64 @@ header > button:hover {
 
      .card {
           margin: 0 20px;
-          margin-bottom: 80px;
+          margin-top: 80px;
+          display: none;
+     }
+
+     .card.active {
+          display: block;
+     }
+
+     .dots {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 20px 0;
+     }
+
+     .dot {
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 3px solid antiquewhite;
+          margin-right: 20px;
+     }
+
+     .dot.active {
+          animation-name: rectangular-dot;
+          animation-direction: normal;
+          animation-fill-mode: forwards;
+          animation-iteration-count: 1;
+          animation-duration: 2s;
+          border-radius: 10px;
+          transition: 0.5s ease;
+     }
+
+     @keyframes rectangular-dot {
+          from {
+               width: 20px;
+          }
+          to {
+               width: 50px;
+          }
+     }
+     .dot-progress.active {
+          width: 20px;
+          height: 20px;
+          animation-name: progress-dot;
+          animation-duration: 10s;
+          background-color: rgb(83, 120, 120);
+          animation-iteration-count: 1;
+          border-radius: 10px;
+          animation-fill-mode: forwards;
+     }
+
+     @keyframes progress-dot {
+          from {
+               width: 20px;
+          }
+          to {
+               width: var(--progress);
+          }
      }
 }

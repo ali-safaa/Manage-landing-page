@@ -246,6 +246,7 @@ header > button:hover {
      font-weight: 700;
      color: white;
      text-transform: capitalize;
+     width: clamp(400px, 27vw, 500px);
 }
 
 .feed__sec-3 > button {
@@ -287,7 +288,8 @@ header > button:hover {
           display: none;
      }
      .card.active {
-          display: block;
+          display: flex;
+          flex-direction: column;
      }
 
      .dots {
@@ -329,9 +331,9 @@ header > button:hover {
           height: 20px;
           animation-name: progress-dot;
           animation-duration: 10s;
-          background-color: rgb(83, 120, 120);
+          background-color: antiquewhite;
           animation-iteration-count: 1;
-          border-radius: 10px;
+          border-radius: 5px;
           animation-fill-mode: forwards;
      }
 
@@ -342,6 +344,20 @@ header > button:hover {
           to {
                width: var(--progress);
           }
+     }
+
+     .feed__sec-3 {
+          flex-direction: column;
+     }
+
+     .feed__sec-3 > h2 {
+          max-width: 300px;
+          margin-bottom: 40px;
+          text-align: center;
+     }
+
+     .feed__sec-3 > button {
+          width: 150px;
      }
 }
 
@@ -440,7 +456,8 @@ header > button:hover {
      }
 
      .card.active {
-          display: block;
+          display: flex;
+          flex-direction: column;
      }
 
      .dots {
@@ -481,7 +498,7 @@ header > button:hover {
           height: 20px;
           animation-name: progress-dot;
           animation-duration: 10s;
-          background-color: rgb(83, 120, 120);
+          background-color: antiquewhite;
           animation-iteration-count: 1;
           border-radius: 10px;
           animation-fill-mode: forwards;
@@ -494,5 +511,19 @@ header > button:hover {
           to {
                width: var(--progress);
           }
+     }
+
+     .feed__sec-3 {
+          flex-direction: column;
+     }
+
+     .feed__sec-3 > h2 {
+          max-width: 300px;
+          margin-bottom: 40px;
+          text-align: center;
+     }
+
+     .feed__sec-3 > button {
+          width: 150px;
      }
 }

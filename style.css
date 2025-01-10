@@ -267,6 +267,92 @@ header > button:hover {
      color: white;
 }
 
+footer {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     background-color: #565b6b;
+     padding: 40px 160px;
+}
+
+.logo-and-socialMedia {
+     display: grid;
+     align-items: center;
+}
+
+.socialMedia {
+     display: flex;
+     align-items: center;
+     margin-top: 40px;
+}
+
+.socialMedia svg {
+     margin-right: 10px;
+}
+
+.nav-footer {
+     display: grid;
+     align-items: center;
+}
+.nav-footer ul {
+     list-style: none;
+}
+
+.nav-footer > ul li {
+     margin-top: 10px;
+     text-transform: capitalize;
+     font-weight: 300;
+     color: white;
+}
+
+.about {
+     display: grid;
+     align-items: center;
+}
+
+.about h5 {
+     margin-top: 10px;
+     text-transform: capitalize;
+     font-weight: 300;
+     color: white;
+}
+
+.email-and-copyRight {
+     display: grid;
+     align-items: center;
+}
+
+.email {
+     display: flex;
+     align-items: center;
+}
+
+.email input {
+     margin-right: 5px;
+     border: none;
+     width: 200px;
+     height: 35px;
+     border-radius: 10px;
+     padding-left: 10px;
+     margin-bottom: 20px;
+}
+
+.email > button {
+     font-weight: 500;
+     color: hsl(12, 88%, 59%);
+     text-transform: capitalize;
+     background-color: white;
+     padding: 10px 25px;
+     border-radius: 20px;
+     border: none;
+     cursor: pointer;
+     width: clamp(100px, 5vw, 200px);
+}
+
+.email-and-copyRight > button {
+     color: rgb(61, 59, 59);
+}
+
 @media (min-width: 889px) and (max-width: 1500px) {
      .hero-info {
           justify-content: center;
